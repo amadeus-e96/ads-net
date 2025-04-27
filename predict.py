@@ -24,7 +24,7 @@ SCALE_TO_512 = False
 
 SLICE_X, SLICE_Y, SLICE_Z = True, False, False
 
-MODEL_PATH = 'checkpoints/ads-net-dt.h5'
+MODEL_PATH = 'checkpoints/adsnet_best_checkpoint.h5'
 TARGET_IMAGE_PATH = f'predict/img/{TARGET_NAME}.tif'
 PREDICTION_OUTPUT_PATH = f'predict/result/{TARGET_NAME}.tif'
 PDF_OUTPUT_PATH = f'predict/result/{TARGET_NAME}.pdf'

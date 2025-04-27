@@ -95,7 +95,7 @@ if not os.path.exists(CHECKPOINT_DIR):
     os.makedirs(CHECKPOINT_DIR)
 
 timestamp = datetime.now().strftime("%Y%m%d-%H%M")
-checkpoint_path = os.path.join(CHECKPOINT_DIR, f"unetpp_{timestamp}_epoch{{epoch:02d}}.h5")
+checkpoint_path = os.path.join(CHECKPOINT_DIR, f"adsnet_{timestamp}_epoch{{epoch:02d}}.h5")
 
 model_checkpoint = ModelCheckpoint(
     filepath=checkpoint_path,
