@@ -9,7 +9,7 @@ from keras.layers import Input
 from keras.callbacks import ModelCheckpoint
 from skimage.transform import resize
 
-from model_architecture import model_UNETPP, ssim_loss
+from model_architecture import model_ADSNET, ssim_loss
 
 IMAGE_HEIGHT, IMAGE_WIDTH = 512, 512
 IMAGE_SIZE = (IMAGE_HEIGHT, IMAGE_WIDTH, 1)
@@ -87,7 +87,7 @@ X_train, Y_train = load_data(data_paths['train']['img'], data_paths['train']['ma
 X_test, Y_test = load_data(data_paths['test']['img'], data_paths['test']['mask'], IMAGE_SIZE)
 
 input_img = Input(IMAGE_SIZE, name='img')
-model = model_UNETPP(input_img, 1)
+model = model_ADSNET(input_img, 1)
 model.compile(optimizer='adam', loss=ssim_loss, metrics=["accuracy"])
 model.summary()
 

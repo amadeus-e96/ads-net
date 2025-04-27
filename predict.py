@@ -6,7 +6,7 @@ from tifffile import imwrite
 from keras.layers import Input
 from time import time
 
-from model_architecture import model_UNETPP
+from model_architecture import model_ADSNET
 from utils.prediction import (
     normalizeImageIntensityRange,
     scaleImg,
@@ -24,7 +24,7 @@ SCALE_TO_512 = False
 
 SLICE_X, SLICE_Y, SLICE_Z = True, False, False
 
-MODEL_PATH = 'checkpoints/unetpp_20250421-1801_epoch10.h5'
+MODEL_PATH = 'checkpoints/ads-net-dt.h5'
 TARGET_IMAGE_PATH = f'predict/img/{TARGET_NAME}.tif'
 PREDICTION_OUTPUT_PATH = f'predict/result/{TARGET_NAME}.tif'
 PDF_OUTPUT_PATH = f'predict/result/{TARGET_NAME}.pdf'
@@ -82,7 +82,7 @@ def main():
 
     print("[INFO] Loading model...")
     input_img = Input((IMAGE_HEIGHT, IMAGE_WIDTH, 1), name='img')
-    model = model_UNETPP(input_img, 1)
+    model = model_ADSNET(input_img, 1)
     model.load_weights(MODEL_PATH)
 
     print("[INFO] Starting volume prediction...")

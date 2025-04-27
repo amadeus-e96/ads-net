@@ -52,7 +52,7 @@ def SubpixelConv2D(input_shape,names, scale=4):
     return Lambda(subpixel, output_shape=subpixel_shape, name=names)
 
 
-def model_UNETPP(inputs, n_labels, dropout=0.1, using_deep_supervision=False):
+def model_ADSNET(inputs, n_labels, dropout=0.1, using_deep_supervision=False):
 
     nb_filter = [16,32,64,128,256]
 

@@ -1,8 +1,8 @@
 *.log
 *.pyc
-*.fda
-*.tif
-*.bmp
+#*.fda
+#*.tif
+#*.bmp
 
 __pycache__/
 
