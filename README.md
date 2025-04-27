@@ -53,9 +53,6 @@ The `slicing.py` script slices the 3D volumes and corresponding masks into 2D sl
 
 Ensure that the `TARGET` is set to either `"train"` or `"test"`. Run the following command:
 
-```bash
-python slicing.py
-
 ## Training
 
 ### Purpose
@@ -78,9 +75,6 @@ The `training.py` script is designed to train the ADS-net model (based on U-Net+
 ### Usage
 
 Before starting the training, make sure your environment is set up and the dataset is sliced as explained in the **Slicing** section. Then, run the following command to begin the training process:
-
-```bash
-python training.py
 
 ## Prediction
 
