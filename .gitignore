@@ -1,0 +1,10 @@
+*.log
+*.pyc
+*.fda
+*.tif
+*.bmp
+
+__pycache__/
+
+.DS_Store
+venv/
