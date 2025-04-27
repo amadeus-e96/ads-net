@@ -2,18 +2,21 @@
 
 This repository contains a pipeline for processing microstructure volumes (in Tiff format) and masks (adsorption maps), using them for training an ADS-net architecture and predicting adsorption maps for slices of the volumes.
 
+---
+## Download Example Data
+To retrieve the example data into the train_data, slices, and predict directories, run the setup.sh script to download the files managed by Git LFS:
+```bash
+./setup.sh
+```
+---
+
 The workflow is divided into three main stages:
 
 1. **Slicing**: Slices 3D microstructure volumes and masks into 2D slices for training.
-2. **Training**: Trains an ADS-net model on the sliced data using a SSIM loss function.
+2. **Training**: Trains ADS-net model on the sliced data using a SSIM loss function.
 3. **Prediction**: Predicts adsorption maps for slices and reconstructs the 3D volume.
 
----
-
 ## Slicing
-
-### Purpose
-The `slice_volumes.py` script slices the 3D volumes and corresponding masks into 2D slices. It processes volumes stored in Tiff format and masks in FDA format, creating a set of 2D slices for both the images and masks.
 
 ### Input
 - **Microstructure Volumes**: Tiff files stored in the `train_data/{TARGET}/imgDT/` directory.
